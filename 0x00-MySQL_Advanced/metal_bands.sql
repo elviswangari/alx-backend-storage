@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS `metal_bands`;
 CREATE TABLE `metal_bands` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `band_name` varchar(255) DEFAULT NULL,
-  `nb_fans` int(11) DEFAULT NULL,
+  `fans` int(11) DEFAULT NULL,
   `formed` year DEFAULT NULL,
   `origin` varchar(255) DEFAULT NULL,
   `split` year DEFAULT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE `metal_bands` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `split`, `style`)
+INSERT INTO `metal_bands` (`band_name`, `fans`, `formed`, `id`, `origin`, `split`, `style`)
 VALUES ('Iron Maiden', '4195', '1975', '1', 'United Kingdom', NULL, 'New wave of british heavy,Heavy'),
 ('Opeth', '4147', '1990', '2', 'Sweden', '1990', 'Extreme progressive,Progressive rock,Progressive'),
 ('Metallica', '3712', '1981', '3', 'USA', NULL, 'Heavy,Bay area thrash'),
@@ -972,7 +972,7 @@ VALUES ('Iron Maiden', '4195', '1975', '1', 'United Kingdom', NULL, 'New wave of
 ('Thorns', '61', '1989', '998', 'Norway', '1989', 'Industrial black'),
 ('Tuatha De Danann', '61', '1995', '999', 'Brazil', NULL, 'Celtic folk'),
 ('White Wizzard', '61', '2007', '1000', 'USA', '2007', 'Heavy');
-INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('Xanthochroid', '61', '2005', '1001', 'USA', NULL, 'Melodic black,Progressive black'),
+INSERT INTO `metal_bands` (`band_name`, `fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('Xanthochroid', '61', '2005', '1001', 'USA', NULL, 'Melodic black,Progressive black'),
 ('Xentrix', '61', '1985', '1002', 'United Kingdom', '1985', 'Thrash'),
 ('Avalanch', '60', '1989', '1003', 'Spain', '2012', 'Heavy,Power'),
 ('Circle II Circle', '60', '2001', '1004', 'USA', '2001', 'Progressive power,Progressive heavy'),
@@ -1972,7 +1972,7 @@ INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `sp
 ('What Mad Universe', '19', '2008', '1998', 'France', '2008', 'Post-,Rock,Atmospheric sludge'),
 ('Akelei', '18', '2006', '1999', 'The Netherlands', '2006', 'Atmospheric doom'),
 ('Alda', '18', '2007', '2000', 'USA', NULL, 'Atmospheric black,Neofolk');
-INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('Appearance Of Nothing', '18', '2004', '2001', 'Switzerland', '2004', 'Progressive,Symphonic power'),
+INSERT INTO `metal_bands` (`band_name`, `fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('Appearance Of Nothing', '18', '2004', '2001', 'Switzerland', '2004', 'Progressive,Symphonic power'),
 ('Arven', '18', '2006', '2002', 'Germany', '2015', 'Melodic power'),
 ('Battlesoul', '18', '2007', '2003', 'Canada', '2007', 'Folk,Thrash'),
 ('Betraying The Martyrs', '18', '2008', '2004', 'France', '2008', 'Progressive deathcore,Symphonic death'),
@@ -2972,7 +2972,7 @@ INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `sp
 ('Cynthesis', '7', '2010', '2998', 'USA', '2010', 'Progressive'),
 ('Cytotoxin', '7', '2010', '2999', 'Germany', NULL, 'Brutal death'),
 ('Darkflight', '7', '2000', '3000', 'Bulgaria', '2000', 'Black,Doom');
-INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('Dawn Of Silence', '7', '2000', '3001', 'Sweden', NULL, 'Melodic heavy'),
+INSERT INTO `metal_bands` (`band_name`, `fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('Dawn Of Silence', '7', '2000', '3001', 'Sweden', NULL, 'Melodic heavy'),
 ('Daylight Misery', '7', '2008', '3002', 'Greece', '2008', 'Gothic,Death doom'),
 ('Deadsquad', '7', '2006', '3003', 'Indonesia', NULL, 'Brutal death,Technical death'),
 ('Deep Mountains', '7', '2009', '3004', 'China', '2009', 'Atmospheric black,Folk'),
@@ -3972,7 +3972,7 @@ INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `sp
 ('Syrens Call', '3', '1997', '3998', 'France', NULL, 'Progressive,Symphonic,Power'),
 ('The Crown Of Yamhad', '3', '2015', '3999', 'Syria', '2015', 'Atmospheric folk,Symphonic'),
 ('The Deathtrip', '3', '2007', '4000', 'Norway', NULL, 'Black');
-INSERT INTO `metal_bands` (`band_name`, `nb_fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('The Enochian', '3', '2007', '4001', 'Greece', '2007', 'Melodic black'),
+INSERT INTO `metal_bands` (`band_name`, `fans`, `formed`, `id`, `origin`, `split`, `style`) VALUES ('The Enochian', '3', '2007', '4001', 'Greece', '2007', 'Melodic black'),
 ('The Lumberjack Feedback', '3', '2008', '4002', 'France', NULL, 'Doom,Sludge'),
 ('The Order Of Israfel', '3', '2012', '4003', 'Sweden', '2012', 'Doom'),
 ('The Ox', '3', '2012', '4004', 'Spain', NULL, 'Progressive'),

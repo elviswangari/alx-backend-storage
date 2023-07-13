@@ -1,3 +1,7 @@
 -- script to read from tables
--- read and orders by fanbase
-SELECT `origin`, `nb_fans` FROM `metal_bands` ORDER BY `nb_fans` DESC;
+-- read group and orders by fanbase
+-- well use SUM, AS , GROUP 
+SELECT `origin`, SUM(fans) AS `nb_fans` 
+	FROM `metal_bands` 
+	GROUP BY `origin`
+	ORDER BY `nb_fans` DESC;
