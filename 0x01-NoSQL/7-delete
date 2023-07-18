@@ -1,2 +1,2 @@
-// remove frm collection
-db.school.remove({name: "Holberton school"});
+// remove or delete frm collection
+db.school.deleteMany({name: "Holberton school"});
