@@ -8,5 +8,5 @@ def schools_by_topic(mongo_collection, topic):
     '''
     return a list
     '''
-    topic = {'topic': {'$selectMatch': {'$eq': topic}}}
-    return [item for item in mongo_collection.find(topic)]
+    topics = {'topic': {'$eq': topic}}
+    return [item for item in mongo_collection.find(topics)]
