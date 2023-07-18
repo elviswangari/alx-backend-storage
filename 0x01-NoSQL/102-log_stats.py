@@ -6,6 +6,7 @@ including the top 10 most present IPs.
 
 from pymongo import MongoClient
 
+
 def log_stats():
     """
     Displays stats about Nginx logs stored in MongoDB,
@@ -20,13 +21,15 @@ def log_stats():
 
     # Methods stats
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-    method_stats = {method: logs_collection.count_documents({"method": method}) for method in methods}
+    method_stats = {method: logs_collection.count_documents(
+        {"method": method}) for method in methods}
     print("Methods:")
     for method, count in method_stats.items():
         print(f"\tmethod {method}: {count}")
 
     # Status check
-    status_check = logs_collection.count_documents({"method": "GET", "path": "/status"})
+    status_check = logs_collection.count_documents(
+            {"method": "GET", "path": "/status"})
     print(f"{status_check} status check")
 
     # Top 10 IPs
