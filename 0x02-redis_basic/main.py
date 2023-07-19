@@ -35,7 +35,7 @@ cache.store(b"second")
 cache.store(b"third")
 print(cache.get(cache.store.__qualname__))
 
-#question4
+#question4 & 5
 s1 = cache.store("first")
 print(s1)
 s2 = cache.store("secont")
