@@ -20,7 +20,7 @@ def counter(method):
         if cached_value:
             return cached_value.decode("utf-8")
 
-        key_count = "count:" + 1
+        key_count = "count:" + url
         content = method(url)
 
         r.incr(key_count)
