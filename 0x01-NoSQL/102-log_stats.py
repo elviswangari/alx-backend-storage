@@ -28,6 +28,8 @@ def log_stats(mongo_collection):
         {"$sort": {"count": -1}},
         {"$limit": 10}
     ])
+    top_ips = list(top_ips)
+    top_ips = sorted(top_ips, key=lambda x: x['count'], reverse=True)
     print("IPs:")
     for ip in top_ips:
         print(f"\t{ip['_id']}: {ip['count']}")
