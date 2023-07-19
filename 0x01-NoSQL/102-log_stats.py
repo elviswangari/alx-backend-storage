@@ -4,7 +4,7 @@ Provides stats about Nginx logs stored in MongoDB,
 including the top 10 most present IPs.
 """
 
-from pymongo import MongoClient
+from pymongo import DESCENDING, MongoClient
 
 
 def log_stats(mongo_collection):
@@ -25,11 +25,9 @@ def log_stats(mongo_collection):
     # Top 10 IPs
     top_ips = mongo_collection.aggregate([
         {"$group": {"_id": "$ip", "count": {"$sum": 1}}},
-        {"$sort": {"count": -1}},
+        {"$sort": {"count": DESCENDING}},
         {"$limit": 10}
     ])
-    top_ips = list(top_ips)
-    top_ips = sorted(top_ips, key=lambda x: x['count'], reverse=True)
     print("IPs:")
     for ip in top_ips:
         print(f"\t{ip['_id']}: {ip['count']}")
