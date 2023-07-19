@@ -6,7 +6,7 @@ Provides stats about Nginx logs stored in MongoDB.
 from pymongo import MongoClient
 
 
-def log_stats():
+def log_stats(mongo_collection):
     """
     Displays stats about Nginx logs stored in MongoDB.
     """
